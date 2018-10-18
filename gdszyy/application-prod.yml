@@ -68,7 +68,7 @@ system:
      UnionPay_pay_notifyUrl: http://zsylapi.kmwlyy.com/zsyy_app_api/app/sys/union_paynotify
      #通知回调
      UnionPay_notifyUrl: http://zsylapi.kmwlyy.com/zsyy_app_api/app/sys/union_notify
-evn: test
+evn: prod
 wlyy: 
      baseUrl: https://api.kmwlyy.com
      getTokenUrl: https://api.kmwlyy.com/Token/get
