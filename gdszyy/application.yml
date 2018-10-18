@@ -1,0 +1,84 @@
+﻿# Spring profiles  
+spring:         
+    # DATASOURCE  
+    datasource:
+             druid:
+                 driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver 
+                 url: jdbc:sqlserver://192.168.100.194;DatabaseName=KMHHOS
+                 username: zsyl  
+                 password: K3g7b9s7v
+                 initial-size: 5 
+                 max-active: 20
+                 min-idle: 2 
+                 max-wait: 60000
+                 validation-query: SELECT 1
+                 test-on-borrow : false
+                 test-on-return : false
+                 test-while-idle : true
+                 time-between-eviction-runs-millis : 60000
+                 min-evictable-idle-time-millis : 25200000
+                 filters : mergeStat,wall
+                 stat-view-servlet:
+                              login-username : admin
+                              login-password : Kmjky+2017
+# spring redis  
+    redis: 
+        # Redis服务器地址  
+        host: 127.0.0.1  
+        # Redis服务器连接端口  
+        port: 6379  
+        # Redis服务器连接密码（默认为空）  
+        password:
+        pool:  
+           # 连接池最大连接数（使用负值表示没有限制）  
+           max-active: 50  
+           # 连接池中的最大空闲连接  
+           min-idle: 10  
+           # 连接池最大阻塞等待时间（使用负值表示没有限制）  
+           max-wait: -1  
+           # 连接池中的最小空闲连接  
+           max-idle: 50  
+        # 连接超时时间（毫秒）  
+        timeout: 2000
+# system config
+system:
+     authCodeTimeout: 120
+     tokenTimeout: 1800 
+     uploadUrl: http://10.2.21.199:6060/zsyy_resource
+     is-test: false 
+     version: 2014-06-30 
+     rest-server: api.ucpaas.com 
+     http-ssl-ip: 0 
+     http-ssl-port: 0     
+     is-authCode: false
+     #user-masterSecret
+     APP_JGTS_masterSecret: 478ed1cadc67c9b6c35eb601
+     #user-appKey
+     APP_JGTS_appKey: 90f3adcff18a35c3786c5bbd
+     1000.ios: http://www.kmhealthcloud.com
+     1000.android: http://www.anticancer365.com
+     lhzxyy.ios: https://www.pgyer.com/uHof
+     lhzxyy.android: https://www.pgyer.com/uHof
+     #支付的回调
+     ALI_COMMON_NOTIFY_URL: http://zsyltest.kmwlyy.com/zsyy_app_api/app/sys/ali_notify;
+     WX_COMMON_PAY_NOTIFY_URL: http://zsyltest.kmwlyy.com/zsyy_app_api/app/sys/wx_notify;
+     WX_MEDICARE_PAY_NOTIFY_URL: http://zsyltest.kmwlyy.com/zsyy_app_api/app/sys/wx_medicare_notify;
+     UnionPay_url: https://61.28.113.182:2014/sisp/platformSendMsg.action
+     #支付回调URL
+     UnionPay_pay_notifyUrl: http://zsyltest.kmwlyy.com/zsyy_app_api/app/sys/union_paynotify
+     #通知回调
+     UnionPay_notifyUrl: http://zsyltest.kmwlyy.com/zsyy_app_api/app/sys/union_notify
+evn: test
+wlyy: 
+     baseUrl: https://prapi.kmwlyy.com
+     getTokenUrl: https://prapi.kmwlyy.com/Token/get
+     loginUrl: https://prapi.kmwlyy.com/users/KMSDInterLoginNoAccount
+     addUserUrl: https://prapi.kmwlyy.com/users/UserCRMRegister
+     appid: KMJKW
+     appsecret: KMJKW#2016@20161010$$!##
+     appkey: KMJKW2016
+     userkey: KMJKW#USERID#@2016
+     syncUserUrl: https://prapi.kmwlyy.com/Sync/CreateUserByMobile
+     getVisitor: https://prapi.kmwlyy.com/UserMembers
+     syncOPDRegister: https://prapi.kmwlyy.com/Sync/OPDRegister
+     insertMember: /UserMembers
