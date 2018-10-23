@@ -43,7 +43,7 @@ spring:
 # system config
 system:
      authCodeTimeout: 120
-     tokenTimeout: 100 
+     tokenTimeout: 1800
      uploadUrl: http://10.2.21.199:6060/zsyy_resource
      is-test: false 
      version: 2014-06-30 
